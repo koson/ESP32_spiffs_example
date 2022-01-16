@@ -259,7 +259,7 @@ static void list(char *path, char *match) {
     DIR *dir = NULL;
     struct dirent *ent;
     char type;
-    char size[9];
+    char size[24];
     char tpath[255];
     char tbuffer[80];
     struct stat sb;
@@ -401,7 +401,7 @@ static void writeTest(char *fname)
     printf("  file: \"%s\"\n", fname);
 
     int n, res, tot, len;
-    char buf[40];
+    char buf[64];
 
     FILE *fd = fopen(fname, "wb");
     if (fd == NULL) {
